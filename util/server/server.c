@@ -30,7 +30,7 @@ void c_server(int fd_user) {
     int *fd_user_ptr = malloc(sizeof(int));
     *fd_user_ptr = fd_user;
     pthread_t thread_cli;
-    pthread_create(&thread_cli, NULL, interface, fd_user);
+    pthread_create(&thread_cli, NULL, interface, fd_user_ptr);
     l = sizeof(cnc_server);
 
     while (1) {
