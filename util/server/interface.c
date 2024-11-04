@@ -36,4 +36,5 @@ void *interface(void *fd_user) {
             handler(buffer, user_fd);
         }
     }
+    return NULL;
 }
